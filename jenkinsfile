@@ -1,0 +1,15 @@
+pipeline {
+    agent {label 'CENTOSJAVA11'}
+    stages {
+        stage('gitclone') {
+            steps {
+                git url: "https://github.com/krishna5683akp/openmrs-core.git", branch: "PROJECT_1.1"
+            }
+        }
+        stage('build') {
+            steps {
+                sh "mvn package"
+            }
+        }
+    }
+}
