@@ -1,5 +1,5 @@
 pipeline {
-    agent {label 'CENTOSJAVA11'}
+    agent {label 'jdk11'}
     stages {
         stage('gitclone') {
             steps {
